@@ -42,7 +42,7 @@ def post_list(request):
         source='en',
         target='fr')
         post.translatedText = json.dumps(translation, indent=2, ensure_ascii=False)
-    return render(request, 'blog/post_list.html', {'posts': posts})
+        return render(request, 'blog/post_list.html', {'posts': posts})
 
 
 
