@@ -28,7 +28,7 @@ def post_list(request):
 
     for post in posts:
         data = json.dumps(tone_analyzer.tone(text=post.text), indent=1)  # converting to string and storing in the data
-        j = json.loads(data);
+        j = json.loads(data)
         post.info = j['document_tone']['tone_categories'][0]['tones']
         # post.info = json.dumps(post.info);
         post.angerScore = post.info[0]['score']
